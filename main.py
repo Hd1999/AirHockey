@@ -77,8 +77,8 @@ def renderPlayingArea():
     pygame.draw.rect(screen, const.WHITE, (width / 2, 0, 3, height))
 
 
-def resetGame(speed):
-    puck.reset(speed)
+def resetGame(speed, player):
+    puck.reset(speed, player)
     paddle1.reset(22, height / 2)
     paddle2.reset(width - 20, height / 2)
 
@@ -136,13 +136,13 @@ def gameLoop(speed):
             # TODO: add goal sound.
 
             score1 += 1
-            resetGame(speed)
+            resetGame(speed, 1)
 
         if insideGoal(1):
             # TODO: add goal sound.
 
             score2 += 1
-            resetGame(speed)
+            resetGame(speed, 2)
 
         puck.checkBoundary(width, height)
 
