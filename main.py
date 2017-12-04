@@ -19,7 +19,7 @@ pygame.init()
 clock = pygame.time.Clock()
 
 width, height = const.WIDTH, const.HEIGHT
-screen = pygame.display.set_mode((width, height))
+screen = pygame.display.set_mode((width, height), pygame.RESIZABLE)
 
 # Window title and Caption
 pygame.display.set_caption('Air Hockey')
