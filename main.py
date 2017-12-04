@@ -25,8 +25,8 @@ width = screen.get_width()
 
 # Create Game Objects
 paddleVelocity = 10
-paddleSize = 40
-puckSize = 35
+paddleSize = 80
+puckSize = 70
 
 paddle1 = Paddle(22, height / 2, paddleSize, paddleVelocity)
 paddle2 = Paddle(width - 20, height / 2, paddleSize, paddleVelocity)
