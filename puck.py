@@ -1,4 +1,5 @@
 import pygame
+import random as rand
 import math
 import constants as const
 
@@ -95,9 +96,9 @@ class Puck():
 
     def reset(self, speed, player):
         if player == 1:
-            self.angle = -.785
+            self.angle = rand.uniform(-math.pi,0)
         else:
-            self.angle = .785
+            self.angle = rand.uniform(0,math.pi)
         self.speed = speed
         self.x = const.WIDTH / 2
         self.y = const.HEIGHT / 2
